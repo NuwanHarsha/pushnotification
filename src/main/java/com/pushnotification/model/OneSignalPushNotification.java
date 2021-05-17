@@ -1,23 +1,25 @@
 package com.pushnotification.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.Id;
 
 /**
  * Created by Weslei Dias.
  */
-@Entity
+@Document(collection = "PushNotification")
 public class OneSignalPushNotification {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private String userName;
 
     private String idOneSignal;
+
+    public Long getId() {
+        return id;
+    }
 
     public String getUserName() {
         return userName;

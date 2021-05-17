@@ -13,7 +13,6 @@ import org.springframework.web.filter.CorsFilter;
  * Created by Weslei Dias
  */
 @SpringBootApplication
-@EnableJpaAuditing
 public class PushNotificationApplication {
 
 	public static void main(String[] args) {
